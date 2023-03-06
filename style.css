@@ -1,0 +1,173 @@
+:root {
+  /* PRIMARY */
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --hover-blue: rgba(56, 41, 224, 0.6);
+  --shadow-blue: rgba(56, 41, 224, 0.2);
+
+  /* NEUTRALS */
+  --v-pale-blue: hsl(225, 100%, 98%);
+  --desatured-blu: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url("fonts/RedHatDisplay-VariableFont_wght.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url("images/pattern-background-mobile.svg") var(--pale-blue)
+    no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wh-center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-card {
+  max-width: 32rem;
+  border-radius: 2.4rem;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 0 10rem var(--shadow-blue);
+  text-align: center;
+  margin: 2.4rem 0;
+}
+
+.hero-img {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.first-heading {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 1.6rem;
+  color: var(--dark-blue);
+}
+
+.descriptive-text {
+  color: var(--desatured-blu);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.6;
+  padding: 0 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.plan-change {
+  background-color: var(--v-pale-blue);
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1.8rem;
+  border-radius: 1.2rem;
+  margin-bottom: 2.4rem;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  /* gap: 2.4rem; */
+}
+
+.icon {
+  margin-right: 2.4rem;
+}
+
+.plan-name {
+  color: var(--dark-blue);
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 0.4rem;
+}
+
+.plan-price {
+  color: var(--desatured-blu);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.change-btn:link,
+.change-btn:visited {
+  color: var(--bright-blue);
+  margin-left: auto;
+  font-size: 1.3rem;
+  font-weight: 900;
+  transition: all 0.3s;
+}
+
+.change-btn:hover,
+.change-btn:active {
+  color: var(--hover-blue);
+}
+
+.btn:link,
+.btn:visited {
+  margin: 0 auto;
+  display: block;
+}
+
+.payment-btn:link,
+.payment-btn:visited {
+  max-width: 80%;
+  background-color: var(--bright-blue);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1.2rem 2.4rem;
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem var(--shadow-blue);
+  margin-bottom: 2.4rem;
+  transition: all 0.3s;
+}
+
+.payment-btn:hover,
+.payment-btn:active {
+  color: #fff;
+  background-color: var(--hover-blue);
+}
+
+.cancel-btn:link,
+.cancel-btn:visited {
+  margin-bottom: 3.2rem;
+  text-decoration: none;
+  color: var(--desatured-blu);
+  font-size: 1.4rem;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+
+.cancel-btn:hover,
+.cancel-btn:active {
+  color: var(--dark-blue);
+}
+
+@media (min-width: 64em) {
+  html {
+    font-size: 65%;
+  }
+
+  .order-card {
+    max-width: 40rem;
+  }
+}
